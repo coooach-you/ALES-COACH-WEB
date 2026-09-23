@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Můj web na Netlify</title>
+</head>
+<body>
+    <h1>Hurá! Můj web funguje.</h1>
+    <p>Tento web běží na Netlify a je propojený s GitHubem.</p>
+</body>
+</html>
