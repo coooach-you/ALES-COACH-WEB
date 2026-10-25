@@ -1,11 +1,295 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Můj web na Netlify</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aleš Demjan – koučink a mentoring</title>
+<meta name="description" content="Koučink zaměřený na změnu, náročné životní situace, nastavení mysli a komunikaci. Mentoring personální a manažerské práce. Aleš Demjan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --bg-alt: #f1eee8;
+    --ink: #2b2f33;
+    --ink-soft: #5e656b;
+    --accent: #6f8a7d;
+    --accent-dark: #55705f;
+    --line: #dcd7cd;
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* Navigace */
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,245,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 68px; }
+  .brand { font-weight: 300; font-size: 19px; letter-spacing: .04em; text-decoration: none; }
+  nav a {
+    text-decoration: none; font-size: 15px; letter-spacing: .03em;
+    margin-left: 28px; color: var(--ink-soft); transition: color .2s;
+  }
+  nav a:hover { color: var(--accent-dark); }
+
+  /* Sekce */
+  section { padding: 64px 0; }
+  section.alt { background: var(--bg-alt); }
+  h1, h2, h3 { font-weight: 200; letter-spacing: -.01em; line-height: 1.2; }
+  h1 { font-size: clamp(38px, 6vw, 64px); }
+  h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 14px; }
+  h3 { font-size: 22px; font-weight: 300; margin-bottom: 6px; }
+  .eyebrow {
+    font-size: 13px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent-dark); font-weight: 400; margin-bottom: 14px; display: block;
+  }
+  .lead { font-size: 21px; color: var(--ink-soft); max-width: 640px; margin-top: 18px; }
+  p { max-width: 680px; }
+  p + p { margin-top: 14px; }
+
+  /* Hero */
+  .hero { padding: 84px 0 64px; }
+  .btn {
+    display: inline-block; margin-top: 40px; padding: 15px 34px;
+    border: 1px solid var(--accent-dark); color: var(--accent-dark);
+    text-decoration: none; font-size: 15px; letter-spacing: .06em;
+    transition: background .25s, color .25s;
+  }
+  .btn:hover { background: var(--accent-dark); color: #fff; }
+
+  /* Mřížka témat */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 28px; margin-top: 32px; }
+  .card { padding: 30px 0 0; border-top: 1px solid var(--line); }
+  .card p { color: var(--ink-soft); font-size: 17px; }
+
+  /* O mně */
+  .about { display: grid; grid-template-columns: 1fr 300px; gap: 70px; align-items: start; }
+  .photo {
+    aspect-ratio: 4 / 5; background: var(--line);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink-soft); font-size: 14px; text-align: center; padding: 20px;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Kroky */
+  .steps { margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: s; }
+  .step { counter-increment: s; }
+  .step::before {
+    content: counter(s, decimal-leading-zero);
+    display: block; font-weight: 200; font-size: 40px; color: var(--accent); margin-bottom: 8px;
+  }
+  .step p { color: var(--ink-soft); font-size: 17px; }
+
+  /* Zkušenosti */
+  ul.plain { list-style: none; margin-top: 22px; max-width: 680px; }
+  ul.plain li { padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+  ul.plain li strong { font-weight: 400; color: var(--ink); }
+
+  /* Kontakt */
+  .contact-lines { margin-top: 34px; font-size: 22px; }
+  .contact-lines a { text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+  .contact-lines a:hover { color: var(--accent-dark); }
+  .contact-lines div + div { margin-top: 12px; }
+
+  footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); }
+
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    section { padding: 44px 0; }
+    .hero { padding: 52px 0 40px; }
+    .about { grid-template-columns: 1fr; gap: 32px; }
+    .photo { max-width: 260px; }
+    nav a { margin-left: 16px; font-size: 14px; }
+    nav a.hide-m { display: none; }
+    body { font-size: 17px; }
+  }
+  @media (max-width: 520px) {
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
-    <h1>Hurá! Můj web funguje.</h1>
-    <p>Tento web běží na Netlify a je propojený s GitHubem.</p>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Aleš Demjan</a>
+    <nav>
+      <a class="hide-m" href="#koucovani">Koučování</a>
+      <a class="hide-m" href="#pomoc">S čím pomáhám</a>
+      <a class="hide-m" href="#o-mne">O mně</a>
+      <a class="hide-m" href="#spoluprace">Spolupráce</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Koučink · Mentoring</span>
+      <h1>Prostor pro změnu.</h1>
+      <p class="lead">Změna – stres, nebo radost? Stres, pokud se jí obáváte. Radost, pokud ji překonáte. Každopádně je to nutnost, dnes více než kdy jindy.</p>
+      <p class="lead">Doprovázím lidi v době, kdy se něco mění nebo je potřeba se v něčem znovu zorientovat – v práci, doma i uvnitř sebe.</p>
+      <a class="btn" href="#kontakt">Domluvit úvodní rozhovor</a>
+    </div>
+  </section>
+
+  <section id="koucovani" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Koučování</span>
+      <h2>Co je koučování</h2>
+      <p>Koučování je pro mě rozhovor, ve kterém máte prostor zastavit se, utřídit si myšlenky a najít vlastní odpovědi. Nejsem tu proto, abych za vás rozhodoval, ale abych se ptal, naslouchal a pomáhal vám vidět situaci z více stran.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Doprovázení</h3>
+          <p>Jdu s vámi úsekem cesty, kterým právě procházíte. Nevím lépe než vy, co je pro vás správné. Umím ale být tím, kdo se ptá, naslouchá a pomáhá udržet směr.</p>
+        </div>
+        <div class="card">
+          <h3>Hledání cest</h3>
+          <p>Společně hledáme možnosti, které jste dosud neviděli nebo odmítali. Cílem není jedno správné řešení, ale takové, které je vaše a které dokážete uskutečnit.</p>
+        </div>
+        <div class="card">
+          <h3>Spolupráce</h3>
+          <p>Pracujeme jako partneři. Vy znáte svůj život a situaci, já znám metody a umím je nabídnout. Co vyzkoušíme a v jakém tempu, rozhodujeme společně.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pomoc">
+    <div class="wrap">
+      <span class="eyebrow">S čím pomáhám</span>
+      <h2>Témata, na kterých spolu můžeme pracovat</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Práce se změnou</h3>
+          <p>Nová životní nebo pracovní etapa, rozhodování na křižovatce, hledání dalšího směru.</p>
+        </div>
+        <div class="card">
+          <h3>Obtížné životní situace</h3>
+          <p>Období, kdy je těžké udržet nadhled. Společně hledáme, co je v našich silách, a jaký může být další krok.</p>
+        </div>
+        <div class="card">
+          <h3>Nastavení mysli</h3>
+          <p>Práce s přesvědčeními, vzorci a způsobem, jakým o sobě a o situacích přemýšlíme.</p>
+        </div>
+        <div class="card">
+          <h3>Vztahové rozdíly</h3>
+          <p>Porozumění tomu, proč se v blízkých i pracovních vztazích míjíme, a jak najít společnou řeč.</p>
+        </div>
+        <div class="card">
+          <h3>Komunikace náročných situací</h3>
+          <p>Příprava na obtížné rozhovory, zpětnou vazbu, konflikt nebo nepříjemné rozhodnutí.</p>
+        </div>
+        <div class="card">
+          <h3>Mentoring personální a manažerské práce</h3>
+          <p>Praktická podpora pro manažery a HR profesionály – vedení lidí, rozvoj týmu, nastavování procesů.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-mne" class="alt">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">O mně</span>
+        <h2>Aleš Demjan</h2>
+        <p>Přes dvacet let pracuji v personalistice a v tréninzích a rozvoji lidí. Prošel jsem prací v HR managementu, vzděláváním a rozvojem, leadership koučinkem i podporou firem a týmů při zavádění AI do každodenní práce.</p>
+        <p>Technický základ mám z VUT a na začátku kariéry jsem se věnoval programování. Dodnes mi pomáhá přemýšlet o věcech strukturovaně – a zároveň vím, že nejdůležitější rozhodnutí se dělají u lidí, ne u tabulek.</p>
+      </div>
+      <div class="photo">
+        <!-- Zde vložte fotografii: <img src="fotka.jpg" alt="Aleš Demjan"> -->
+        Místo pro fotografii
+      </div>
+    </div>
+  </section>
+
+  <section id="spoluprace">
+    <div class="wrap">
+      <span class="eyebrow">Spolupráce</span>
+      <h2>Jak to probíhá</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Úvodní rozhovor</h3>
+          <p>Krátké nezávazné setkání, na kterém se poznáme a zjistíme, jestli si sedíme.</p>
+        </div>
+        <div class="step">
+          <h3>Dohoda na cíli</h3>
+          <p>Společně si ujasníme, co chcete změnit nebo řešit a jak poznáte, že se to daří.</p>
+        </div>
+        <div class="step">
+          <h3>Společná práce</h3>
+          <p>Pravidelná setkání v dohodnutém rytmu, osobně nebo online.</p>
+        </div>
+        <div class="step">
+          <h3>Zhodnocení</h3>
+          <p>Ohlédnutí za tím, co se podařilo, a rozhodnutí, jestli pokračovat, nebo spolupráci uzavřít.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vychazim" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Výcviky a kurzy</span>
+      <h2>Z čeho vycházím</h2>
+      <p>Při práci s lidmi čerpám z několika přístupů. Žádný z nich nepovažuji za jediný správný, každý pomáhá v jiné situaci.</p>
+      <ul class="plain">
+        <li><strong>Business kouč</strong> – výcvik, Qed &amp; Quod, s.r.o. (Radvan Bahbouch)</li>
+        <li><strong>Systemický kouč</strong> – výcvik, JASEKA (Petr Parma)</li>
+        <li><strong>Soulwork coaching</strong> – Martyn Carruthers</li>
+        <li><strong>Mediace</strong> – výcvik, Asociace mediátorů</li>
+        <li><strong>NLP</strong> – IWAISA</li>
+        <li><strong>Silva method</strong></li>
+        <li><strong>Antropologic BioTypology</strong> – Finest selection, Brno</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="wrap">
+      <span class="eyebrow">Blog</span>
+      <h2>Postupně sem přibudou texty</h2>
+      <p>Připravuji krátké články o změně, komunikaci a vedení lidí. Pokud vás zajímá konkrétní téma, napište mi.</p>
+    </div>
+  </section>
+
+  <section id="kontakt" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Pojďme si promluvit</h2>
+      <p>První rozhovor je nezávazný. Napište mi nebo zavolejte a domluvíme se na tom, jak dál.</p>
+      <div class="contact-lines">
+        <div><a href="mailto:ales.demjan@live.com">ales.demjan@live.com</a></div>
+        <div><a href="tel:+420731492241">+420 731 492 241</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> Aleš Demjan</div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
