@@ -20,11 +20,9 @@ const card = (t) => `        <div class="topic" tabindex="0" role="button" aria-
             <div class="topic-face topic-front">
               <h4>${esc(t.nazev)}</h4>
               <p class="aneb">${esc(t.aneb)}</p>
-              <span class="turn" aria-hidden="true">Co obsahuje</span>
             </div>
             <div class="topic-face topic-back" aria-hidden="true">
-              <p class="title">${esc(t.nazev)}</p>
-              <p class="aneb">${esc(t.aneb)}</p>
+              <p class="sr-only">${esc(t.nazev)}</p>
               <ul>
 ${t.body.map((b) => `                <li>${esc(b)}</li>`).join("\n")}
               </ul>
