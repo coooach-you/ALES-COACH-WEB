@@ -84,6 +84,26 @@ p + p { margin-top: 10px; }
 h2.center { text-align: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .hero.center p { margin-left: auto; margin-right: auto; }
+
+/* Hero s fotkou v pozadí (Koučink, Tréninky) */
+.hero-photo { position: relative; overflow: hidden; padding: 80px 0 72px; }
+.hero-photo .hero-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 30%; z-index: 0;
+}
+.hero-koucink .hero-bg { object-position: 60% 12%; }
+.hero-treninky .hero-bg { object-position: 70% 6%; }
+.hero-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to right, rgba(250,248,245,.92), rgba(250,248,245,.20));
+}
+.hero-photo .wrap { position: relative; z-index: 2; }
+.hero-photo.center { text-align: left; }
+.hero-photo.center p { margin-left: 0; margin-right: 0; }
+.hero-photo .lead { color: var(--ink); }
+.hero-photo .eyebrow { color: #2e4236; }
+.hero-note { font-size: 13px; color: var(--ink-soft); padding-top: 6px; text-align: right; }
+.hero-after { padding: 26px 0 40px; }
 .btn {
   display: inline-block; margin-top: 28px; padding: 15px 34px;
   border: 1px solid var(--accent-dark); color: var(--accent-dark);
@@ -236,16 +256,23 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); font-size: 14px; co
 }
 .shot figcaption { margin-top: 10px; font-size: 13px; color: var(--ink-soft); }
 .hero .shot { margin-top: 32px; }
+.hero-after .shot { margin-top: 0; }
 .formats-shot { margin-top: 32px; }
 
 @media (max-width: 900px) {
   .steps, .steps.five { grid-template-columns: repeat(2, 1fr); }
   .topics { grid-template-columns: repeat(2, 1fr); }
   .grid.two { gap: 28px 36px; }
+  .hero-photo::before { background: rgba(250,248,245,.85); }
+  .hero-koucink .hero-bg { object-position: 35% 12%; }
+  .hero-treninky .hero-bg { object-position: 75% 6%; }
 }
 @media (max-width: 760px) {
   section { padding: 32px 0; }
   .hero { padding: 36px 0 28px; }
+  .hero-photo { padding: 48px 0 44px; }
+  .hero-note { text-align: left; }
+  .hero-after { padding: 20px 0 32px; }
   .about { grid-template-columns: 1fr; gap: 24px; }
   .photo { max-width: 220px; }
   nav a { margin-left: 16px; font-size: 14px; }
