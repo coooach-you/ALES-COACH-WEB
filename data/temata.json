@@ -1,0 +1,253 @@
+[
+  {
+    "skupina": "Lidé a komunikace",
+    "temata": [
+      {
+        "nazev": "Emoce na pracovišti",
+        "aneb": "Aneb jak zvládat emoce tak, aby pomáhaly, ne brzdily.",
+        "body": [
+          "Rozpoznání emocí v běžných pracovních situacích",
+          "Regulace emocí pod tlakem",
+          "Jak nevybuchnout a nezamést věci pod koberec",
+          "Emoční hygiena během dne",
+          "Praktické nástroje pro náročné chvíle"
+        ]
+      },
+      {
+        "nazev": "Komunikace, která funguje",
+        "aneb": "Aneb jak si opravdu rozumět.",
+        "body": [
+          "Jasné a srozumitelné mluvení",
+          "Aktivní naslouchání v praxi",
+          "Komunikační slepá místa",
+          "Očekávání a interpretace",
+          "Jak sdělit i nepříjemné věci"
+        ]
+      },
+      {
+        "nazev": "Obtížné rozhovory bez stresu",
+        "aneb": "Aneb jak říct těžké věci lehčím způsobem.",
+        "body": [
+          "Příprava na náročný rozhovor",
+          "Struktura, která drží emoce na uzdě",
+          "Mluvit o problému, ne o člověku",
+          "Klid a respekt v rozhovoru",
+          "Co dělat po rozhovoru"
+        ]
+      },
+      {
+        "nazev": "Asertivita v praxi",
+        "aneb": "Aneb jak zůstat sám sebou.",
+        "body": [
+          "Říct „ne“ bez konfliktu",
+          "Udržet si vlastní hranice",
+          "Mluvit jasně a klidně",
+          "Zvládání manipulativního chování",
+          "Být pevný, ale ne tvrdý"
+        ]
+      },
+      {
+        "nazev": "Neverbální komunikace v praxi",
+        "aneb": "Aneb to, co říkáte tělem, je slyšet víc než slova.",
+        "body": [
+          "Čtení řeči těla",
+          "Jak působit jistě a klidně",
+          "Práce s nervozitou",
+          "Soulad slov a těla",
+          "Neverbální podpora důvěry"
+        ]
+      },
+      {
+        "nazev": "Prezentační dovednosti v praxi",
+        "aneb": "Aneb jak mluvit před lidmi tak, aby chtěli poslouchat.",
+        "body": [
+          "Stavba silné prezentace",
+          "Hlas, tempo a energie",
+          "Zvládání trémy",
+          "Zapojení publika",
+          "Když se něco pokazí"
+        ]
+      }
+    ]
+  },
+  {
+    "skupina": "Vedení a týmy",
+    "temata": [
+      {
+        "nazev": "Vztahy v týmu",
+        "aneb": "Aneb jak budovat pracovní vztahy, které drží i pod tlakem.",
+        "body": [
+          "Co tvoří zdravé pracovní vztahy",
+          "Předcházení napětí a nedorozumění",
+          "Důvěra jako základ spolupráce",
+          "Řešení konfliktů bez ztráty vztahu",
+          "Mikrokomunikace, která vztahy posiluje"
+        ]
+      },
+      {
+        "nazev": "Budování výkonných týmů",
+        "aneb": "Aneb jak pracovat spolu, ne jen vedle sebe.",
+        "body": [
+          "Čím se výkonný tým liší od průměrného",
+          "Role, odpovědnosti a jasná očekávání",
+          "Společné cíle a sdílená motivace",
+          "Podpora týmové dynamiky",
+          "Nástroje pro spolupráci"
+        ]
+      },
+      {
+        "nazev": "Feedback, který posouvá",
+        "aneb": "Aneb jak dávat zpětnou vazbu, která nebolí, ale pomáhá.",
+        "body": [
+          "Jasná a užitečná zpětná vazba",
+          "Pozitivní i negativní feedback",
+          "Emotivní reakce druhé strany",
+          "Jak si o feedback říct",
+          "Kultura otevřenosti"
+        ]
+      },
+      {
+        "nazev": "Koučink pro každodenní situace",
+        "aneb": "Aneb jak vést lidi otázkami, ne příkazy.",
+        "body": [
+          "Základní koučovací otázky",
+          "Krátký koučovací rozhovor",
+          "Podpora samostatnosti lidí",
+          "Práce s cíli a motivací",
+          "Koučink v běžných firemních situacích"
+        ]
+      },
+      {
+        "nazev": "Porady jako nástroj",
+        "aneb": "Aneb jak vést porady, které nejsou ztrátou času.",
+        "body": [
+          "Příprava efektivní porady",
+          "Udržení pozornosti",
+          "Řízení diskuse",
+          "Konec s jasným výsledkem",
+          "Jak omezit zbytečné porady"
+        ]
+      },
+      {
+        "nazev": "Firemní kultura, která žije",
+        "aneb": "Aneb jak tvořit prostředí, kde lidé chtějí být.",
+        "body": [
+          "Co tvoří živou kulturu",
+          "Hodnoty, které nejsou jen na zdi",
+          "Podpora otevřenosti a důvěry",
+          "Role lídrů v kultuře",
+          "Udržení kultury v náročných časech"
+        ]
+      }
+    ]
+  },
+  {
+    "skupina": "Já a moje energie",
+    "temata": [
+      {
+        "nazev": "Mozek v práci",
+        "aneb": "Aneb manuál pro váš mozek.",
+        "body": [
+          "Reakce mozku na stres a tlak",
+          "Když se mozek „zasekne“",
+          "Práce s pozorností a energií",
+          "Praktické neuro-hacky",
+          "Jak mozek nezahltit"
+        ]
+      },
+      {
+        "nazev": "Mindfulness v pracovním dni",
+        "aneb": "Aneb jak zpomalit, aby práce šla rychleji.",
+        "body": [
+          "Návrat do přítomnosti během dne",
+          "Krátké mindfulness techniky",
+          "Snížení mentálního zahlcení",
+          "Práce s pozorností",
+          "Prevence stresu"
+        ]
+      },
+      {
+        "nazev": "Stres management",
+        "aneb": "Aneb jak zkrotit stres dřív, než zkrotí on vás.",
+        "body": [
+          "Včasné rozpoznání stresu",
+          "Práce s akutním stresem",
+          "Snížení dlouhodobého přetížení",
+          "Antistresové návyky",
+          "Zvládání náročného období"
+        ]
+      },
+      {
+        "nazev": "Time management",
+        "aneb": "Aneb jak řídit čas, aby neřídil vás.",
+        "body": [
+          "Nastavení priorit",
+          "Práce s energií, ne jen s časem",
+          "Realistické plánování",
+          "Odstranění rušičů",
+          "Udržitelný rytmus"
+        ]
+      },
+      {
+        "nazev": "Work–life balance",
+        "aneb": "Aneb jak žít tak, aby práce nebyla celý život.",
+        "body": [
+          "Nastavení hranic",
+          "Práce s energií",
+          "Odpočinek bez výčitek",
+          "Zdravé rituály",
+          "Dlouhodobá rovnováha"
+        ]
+      },
+      {
+        "nazev": "Osobní rozvoj bez klišé",
+        "aneb": "Aneb život podle mě.",
+        "body": [
+          "Nastavení vlastní cesty",
+          "Když se člověk zasekne",
+          "Práce s motivací",
+          "Výběr správných nástrojů rozvoje",
+          "Růst bez tlaku"
+        ]
+      }
+    ]
+  },
+  {
+    "skupina": "Praktické nástroje",
+    "temata": [
+      {
+        "nazev": "AI nástroje v každodenní práci",
+        "aneb": "Aneb jak využít AI chytře, prakticky a bez strachu.",
+        "body": [
+          "Co dnes AI opravdu umí",
+          "Úspora času a automatizace",
+          "AI jako parťák, ne hrozba",
+          "Praktické scénáře z běžné práce",
+          "Zdravé hranice s technologií"
+        ]
+      },
+      {
+        "nazev": "Efektivita v Microsoft Office",
+        "aneb": "Aneb jak udělat víc práce za méně kliků.",
+        "body": [
+          "Klíčové funkce, které šetří čas",
+          "Chytré šablony",
+          "Automatizace běžných úkolů",
+          "Tipy pro Excel, Word, Outlook",
+          "Vlastní workflow"
+        ]
+      },
+      {
+        "nazev": "Kreativita pro nekreativce",
+        "aneb": "Aneb jak zapnout kreativní režim, když ho potřebujete.",
+        "body": [
+          "Překonání kreativního bloku",
+          "Jednoduché techniky pro nápady",
+          "Tvoření pod tlakem",
+          "Práce s inspirací",
+          "Kreativita jako dovednost, ne talent"
+        ]
+      }
+    ]
+  }
+]
