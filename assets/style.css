@@ -77,6 +77,8 @@ p + p { margin-top: 14px; }
 
 /* Hero */
 .hero { padding: 84px 0 64px; }
+.hero.center { text-align: center; }
+.hero.center p { margin-left: auto; margin-right: auto; }
 .btn {
   display: inline-block; margin-top: 40px; padding: 15px 34px;
   border: 1px solid var(--accent-dark); color: var(--accent-dark);
