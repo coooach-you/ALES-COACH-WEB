@@ -79,7 +79,6 @@ p + p { margin-top: 10px; }
 .hero { padding: 52px 0 40px; }
 .hero.center { text-align: center; }
 .hero.center h1, .hero.center .lead { text-wrap: balance; }
-.hero.center .shot { text-align: left; }
 .tagline { font-weight: 200; font-size: clamp(24px, 3.2vw, 34px); line-height: 1.25; margin-top: 10px; }
 h2.center { text-align: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -102,7 +101,6 @@ h2.center { text-align: center; }
 .hero-photo.center p { margin-left: 0; margin-right: 0; }
 .hero-photo .lead { color: var(--ink); }
 .hero-photo .eyebrow { color: #2e4236; }
-.hero-note { font-size: 13px; color: var(--ink-soft); padding-top: 6px; text-align: right; }
 .hero-after { padding: 26px 0 40px; }
 .btn {
   display: inline-block; margin-top: 28px; padding: 15px 34px;
@@ -129,7 +127,6 @@ h2.center { text-align: center; }
 
 /* Kroky */
 .steps { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: s; }
-.steps.five { grid-template-columns: repeat(5, 1fr); gap: 24px; }
 .step { counter-increment: s; }
 .step::before {
   content: counter(s, decimal-leading-zero);
@@ -234,33 +231,57 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); font-size: 14px; co
 .format .bar { height: 6px; background: var(--accent); margin-bottom: 10px; }
 .format h3 { margin-bottom: 2px; }
 .format p { color: var(--ink-soft); font-size: 17px; }
-.note-title { margin-top: 32px; }
-.note {
-  margin-top: 12px; padding: 18px 22px; border-left: 2px solid var(--accent);
-  background: var(--bg); max-width: 760px;
-}
-.note h3 { font-size: 19px; font-weight: 400; margin-bottom: 6px; }
-.note p { color: var(--ink-soft); font-size: 17px; }
 
-/* Tréninky: fotky */
-.shot { margin: 0 auto; }
-.shot { max-width: 840px; }
-.shot.wide { max-width: 720px; }
-.shot-frame {
-  position: relative; aspect-ratio: 3 / 2; background: var(--line);
+/* Tréninky: forma dodání (fotka vlevo, text vpravo) */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.split-img { margin: 0; }
+.split-img img { display: block; width: 100%; height: auto; }
+.split h3 { margin-top: 6px; }
+.split p { color: var(--ink-soft); font-size: 17px; }
+
+/* Tréninky: příprava jako tok kroků (ikony spojené šipkami) */
+.flow { list-style: none; margin-top: 28px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.flow-step { position: relative; }
+.flow-icon {
   display: flex; align-items: center; justify-content: center;
-  color: var(--ink-soft); font-size: 15px; overflow: hidden;
+  width: 56px; height: 56px; border-radius: 50%; margin-bottom: 14px;
+  border: 1px solid var(--accent); background: var(--bg-alt); color: var(--accent-dark);
 }
-.shot-frame img {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+.flow-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.flow-step::after, .flow-step::before { content: ""; position: absolute; }
+.flow-step::after { top: 28px; left: 66px; right: -14px; height: 1px; background: var(--accent); }
+.flow-step::before {
+  top: 24px; right: -14px; width: 8px; height: 8px;
+  border-top: 1px solid var(--accent); border-right: 1px solid var(--accent); transform: rotate(45deg);
 }
-.shot figcaption { margin-top: 10px; font-size: 13px; color: var(--ink-soft); }
-.hero .shot { margin-top: 32px; }
-.hero-after .shot { margin-top: 0; }
-.formats-shot { margin-top: 32px; }
+.flow-step:last-child::after, .flow-step:last-child::before { display: none; }
+.flow-step p { color: var(--ink-soft); font-size: 17px; }
+
+/* Tréninky: technologie – symbol uprostřed čtyř bloků */
+.tech { display: grid; grid-template-columns: 1fr 180px 1fr; gap: 28px 40px; margin-top: 20px; align-items: start; }
+.tech .card:nth-of-type(odd) { grid-column: 1; }
+.tech .card:nth-of-type(even) { grid-column: 3; }
+.tech-symbol { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 180px; height: 180px; }
+.tech-symbol circle, .tech-symbol path, .tech-symbol rect { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.tech-symbol .ts-orbit { stroke: var(--line); stroke-width: 1; }
+.tech-symbol .ts-dots { stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 0 6; opacity: .6; }
+.tech-symbol .ts-dot { fill: var(--line); stroke: none; }
+.tech-symbol .ts-link { stroke: var(--accent-dark); stroke-width: 1.2; }
+.tech-symbol .ts-node { fill: var(--bg); stroke: var(--accent); stroke-width: 1.2; }
+.tech-symbol .ts-joint { fill: var(--accent-dark); stroke: none; }
+.tech-symbol .ts-center { fill: var(--bg); stroke: var(--accent); stroke-width: 1.4; }
+.tech-symbol .ts-icon * { stroke: var(--accent-dark); stroke-width: 1.2; }
 
 @media (max-width: 900px) {
-  .steps, .steps.five { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .flow { grid-template-columns: 1fr; gap: 22px; }
+  .flow-step { display: grid; grid-template-columns: 56px 1fr; grid-auto-rows: min-content; column-gap: 20px; min-height: 92px; }
+  .flow-icon { grid-row: 1 / span 2; margin-bottom: 0; }
+  .flow-step::after { top: 64px; bottom: -14px; left: 28px; right: auto; width: 1px; height: auto; }
+  .flow-step::before { top: auto; bottom: -14px; left: 24px; right: auto; transform: rotate(135deg); }
+  .tech { grid-template-columns: 1fr 140px 1fr; gap: 24px 28px; }
+  .tech-symbol { width: 140px; height: 140px; }
+  .split { gap: 32px; }
   .topics { grid-template-columns: repeat(2, 1fr); }
   .grid.two { gap: 28px 36px; }
   .hero-photo::before { background: rgba(250,248,245,.85); }
@@ -271,7 +292,6 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); font-size: 14px; co
   section { padding: 32px 0; }
   .hero { padding: 36px 0 28px; }
   .hero-photo { padding: 48px 0 44px; }
-  .hero-note { text-align: left; }
   .hero-after { padding: 20px 0 32px; }
   .about { grid-template-columns: 1fr; gap: 24px; }
   .photo { max-width: 220px; }
@@ -281,13 +301,17 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); font-size: 14px; co
   .paths, .grid.two { grid-template-columns: 1fr; }
   .steps-photo { grid-template-columns: 1fr; gap: 28px; }
   .steps-img img { height: auto; aspect-ratio: 3 / 2; }
+  .split { grid-template-columns: 1fr; gap: 24px; }
+  .tech { grid-template-columns: 1fr; gap: 24px; }
+  .tech .card:nth-of-type(n) { grid-column: 1; }
+  .tech-symbol { grid-column: 1; grid-row: auto; justify-self: center; }
   .path { padding: 24px 22px 20px; }
 }
 @media (max-width: 520px) {
   .wrap { padding: 0 20px; }
   .brand { font-size: 17px; letter-spacing: .02em; }
   nav a { margin-left: 14px; letter-spacing: .01em; }
-  .steps, .steps.five, .steps.two { grid-template-columns: 1fr; }
+  .steps, .steps.two { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; gap: 24px; }
   .qr { text-align: left; }
   .qr img { margin: 0; }
