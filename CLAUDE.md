@@ -2,6 +2,11 @@
 
 Osobní web Aleše Demjana (koučink a tréninky). Statické HTML/CSS + trochu vanilla JS, bez frameworku a bez build nástroje. Stránky: `index.html` (Úvod), `koucink.html`, `treninky.html`, `zasady-ochrany-osobnich-udaju.html`, `404.html`; společné styly v `assets/style.css`. Podrobnosti o struktuře a nasazení jsou v `README.md`.
 
+## Navázání nového vlákna
+- Repozitář: GitHub `coooach-you/ALES-COACH-WEB` (https://github.com/coooach-you/ALES-COACH-WEB), hlavní větev `main`. Lokální klon: `C:\Users\Uzivatel\OneDrive\Documents_k zaloze\ALES-COACH-WEB` – nové vlákno v Claude Code otevři v této složce, CLAUDE.md se načte sám.
+- `gh` je přihlášený jako `coooach-you` (keyring), lokální git identita `coooach-you` / `coooach@gmail.com`. Hosting: Netlify, web „alescoach“, doména https://alesdemjan.cz/.
+- Na začátku: `git fetch origin`, zkontroluj otevřené PR (`gh api repos/coooach-you/ALES-COACH-WEB/pulls --jq '.[].html_url'`) a na čem stojí lokální checkout. Pak pokračuj podle Postupu práce níže a seznamu Otevřené úkoly.
+
 ## Postup práce
 - Každou dávku změn dělej v nové větvi z aktuální `origin/main` a otevři pull request (`gh api repos/coooach-you/ales-coach-web/pulls ...`, GraphQL/`gh pr create` v tomto prostředí nefunguje). Slučuje ho Aleš sám, nemerguj a nepřepisuj historii (force push).
 - Před založením větve zkontroluj, že předchozí PR je sloučený; pokud ne, přidej změny do jeho větve.
