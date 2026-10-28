@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Koučink – Aleš Demjan</title>
 <meta name="description" content="Koučink zaměřený na změnu, náročné životní situace, nastavení mysli a komunikaci. Mentoring personální a manažerské práce. Aleš Demjan.">
 <link rel="canonical" href="https://alesdemjan.cz/koucink">
@@ -45,6 +47,7 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Přeskočit na obsah</a>
 
 <header class="top">
   <div class="wrap">
@@ -53,15 +56,15 @@
       <a class="hide-m" href="/">Úvod</a>
       <a href="/koucink" aria-current="page">Koučink</a>
       <a href="/treninky">Tréninky</a>
-      <a href="#kontakt">Kontakt</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <section class="hero center hero-photo hero-koucink">
-    <img class="hero-bg" src="assets/img/hero-koucink.jpg" alt="" width="1672" height="941" fetchpriority="high">
+    <img decoding="async" class="hero-bg" src="assets/img/hero-koucink-1200.webp" srcset="assets/img/hero-koucink-800.webp 800w, assets/img/hero-koucink-1200.webp 1200w, assets/img/hero-koucink-1672.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high">
     <div class="wrap">
       <span class="eyebrow">Koučink · Mentoring</span>
       <h1>Koučink a mentoring</h1>
@@ -146,7 +149,7 @@
           </div>
         </div>
         <figure class="steps-img">
-          <img src="assets/img/koucink-rozhovor.jpg" alt="Aleš Demjan při koučovacím rozhovoru s klientem." width="1536" height="1024" loading="lazy">
+          <img src="assets/img/koucink-rozhovor-1536.webp" srcset="assets/img/koucink-rozhovor-768.webp 768w, assets/img/koucink-rozhovor-1536.webp 1536w" sizes="(max-width: 760px) 100vw, 490px" alt="Aleš Demjan při koučovacím rozhovoru s klientem." width="1536" height="1024" loading="lazy">
         </figure>
       </div>
     </div>
@@ -242,6 +245,7 @@
           <div><a href="tel:+420731492241">+420 731 492 241</a></div>
         </div>
       </div>
+      <a class="btn vcf" href="/kontakt.vcf" download>Uložit kontakt do telefonu</a>
       <figure class="qr">
         <img src="assets/img/qr-kontakt.png" alt="QR kód s kontaktem Aleše Demjana do telefonu" width="339" height="341" loading="lazy">
         <figcaption>Naskenujte a uložte si kontakt</figcaption>

@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Aleš Demjan – koučink a tréninky</title>
 <meta name="description" content="Aleš Demjan – individuální koučink při změně a v náročných situacích a tréninky na míru pro firmy, týmy, vedoucí a HR.">
 <link rel="canonical" href="https://alesdemjan.cz/">
@@ -61,6 +63,7 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Přeskočit na obsah</a>
 
 <header class="top">
   <div class="wrap">
@@ -69,12 +72,12 @@
       <a class="hide-m" href="/" aria-current="page">Úvod</a>
       <a href="/koucink">Koučink</a>
       <a href="/treninky">Tréninky</a>
-      <a href="#kontakt">Kontakt</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <section class="hero center">
     <div class="wrap">
@@ -97,7 +100,7 @@
         <p>Technický základ mám z VUT a na začátku kariéry jsem se věnoval programování. Dodnes mi pomáhá přemýšlet o věcech strukturovaně, a zároveň vím, že nejdůležitější rozhodnutí se dělají u lidí, ne u tabulek.</p>
       </div>
       <div class="photo">
-        <img src="assets/img/foto.jpg" alt="Aleš Demjan" width="900" height="1125">
+        <img src="assets/img/foto-900.webp" fetchpriority="high" srcset="assets/img/foto-450.webp 450w, assets/img/foto-900.webp 900w" sizes="(max-width: 760px) 280px, 260px" alt="Aleš Demjan" width="900" height="1125">
       </div>
     </div>
   </section>
@@ -182,6 +185,7 @@
           <div><a href="tel:+420731492241">+420 731 492 241</a></div>
         </div>
       </div>
+      <a class="btn vcf" href="/kontakt.vcf" download>Uložit kontakt do telefonu</a>
       <figure class="qr">
         <img src="assets/img/qr-kontakt.png" alt="QR kód s kontaktem Aleše Demjana do telefonu" width="339" height="341" loading="lazy">
         <figcaption>Naskenujte a uložte si kontakt</figcaption>

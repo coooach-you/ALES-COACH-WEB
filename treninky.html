@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Tréninky – Aleš Demjan</title>
 <meta name="description" content="Tréninky a workshopy na míru pro firmy, týmy, vedoucí a HR: komunikace, vedení týmů, práce s energií a praktické nástroje včetně AI. Aleš Demjan.">
 <link rel="canonical" href="https://alesdemjan.cz/treninky">
@@ -45,6 +47,7 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Přeskočit na obsah</a>
 
 <header class="top">
   <div class="wrap">
@@ -53,15 +56,15 @@
       <a class="hide-m" href="/">Úvod</a>
       <a href="/koucink">Koučink</a>
       <a href="/treninky" aria-current="page">Tréninky</a>
-      <a href="#kontakt">Kontakt</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <section class="hero center hero-photo hero-treninky">
-    <img class="hero-bg" src="assets/img/hero-treninky.jpg" alt="" width="1672" height="941" fetchpriority="high">
+    <img decoding="async" class="hero-bg" src="assets/img/hero-treninky-1200.webp" srcset="assets/img/hero-treninky-800.webp 800w, assets/img/hero-treninky-1200.webp 1200w, assets/img/hero-treninky-1672.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high">
     <div class="wrap">
       <span class="eyebrow">Tréninky</span>
       <h1>Tréninky na míru</h1>
@@ -69,9 +72,9 @@
     </div>
   </section>
 
-  <section class="hero-after" aria-hidden="true">
+  <section class="hero-after">
     <div class="wrap">
-      <img class="cloud-img" src="assets/img/mrak-slov.webp" alt="" width="1691" height="717">
+      <img class="cloud-img" src="assets/img/mrak-slov-1000.webp" srcset="assets/img/mrak-slov-600.webp 600w, assets/img/mrak-slov-1000.webp 1000w, assets/img/mrak-slov-1691.webp 1691w" sizes="(max-width: 960px) 100vw, 900px" alt="Mrak slov s tématy tréninků: komunikace, týmy, důvěra, vedení, energie, spolupráce, zpětná vazba, koučink, kultura, emoce, motivace, rozhovor, pozornost, klid, stres, respekt, naslouchání, prezentace, porady, priority, hranice, rovnováha, kreativita, rozvoj a AI." width="1691" height="717">
     </div>
   </section>
 
@@ -377,7 +380,7 @@
   <section id="dodani" class="alt">
     <div class="wrap split">
       <figure class="split-img">
-        <img src="assets/img/trenink-online.jpg" alt="Aleš Demjan vede online trénink od svého stolu." width="1200" height="675" loading="lazy">
+        <img src="assets/img/trenink-online-1200.webp" srcset="assets/img/trenink-online-600.webp 600w, assets/img/trenink-online-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 490px" alt="Aleš Demjan vede online trénink od svého stolu." width="1200" height="675" loading="lazy">
       </figure>
       <div>
         <h2>Forma dodání</h2>
@@ -482,6 +485,7 @@
           <div><a href="tel:+420731492241">+420 731 492 241</a></div>
         </div>
       </div>
+      <a class="btn vcf" href="/kontakt.vcf" download>Uložit kontakt do telefonu</a>
       <figure class="qr">
         <img src="assets/img/qr-kontakt.png" alt="QR kód s kontaktem Aleše Demjana do telefonu" width="339" height="341" loading="lazy">
         <figcaption>Naskenujte a uložte si kontakt</figcaption>
@@ -508,37 +512,6 @@
   </div>
 </footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-<script>
-  // Otočné karty: najetí myší řeší CSS, klepnutí a klávesnici tento skript.
-  (function () {
-    var cards = Array.prototype.slice.call(document.querySelectorAll('.topic'));
-    var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-
-    function setFlipped(card, on) {
-      card.classList.toggle('is-flipped', on);
-      card.setAttribute('aria-pressed', on ? 'true' : 'false');
-      card.querySelector('.topic-front').setAttribute('aria-hidden', on ? 'true' : 'false');
-      card.querySelector('.topic-back').setAttribute('aria-hidden', on ? 'false' : 'true');
-    }
-    function toggle(card) {
-      var on = !card.classList.contains('is-flipped');
-      if (on) cards.forEach(function (c) { if (c !== card) setFlipped(c, false); });
-      setFlipped(card, on);
-    }
-
-    cards.forEach(function (card) {
-      card.addEventListener('click', function () {
-        if (!finePointer.matches) toggle(card);
-      });
-      card.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggle(card);
-        }
-      });
-    });
-  })();
-</script>
 <!-- Cloudflare Web Analytics (bez cookies) --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a8c0a45e6b894fd8a64b70126a6de083"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
