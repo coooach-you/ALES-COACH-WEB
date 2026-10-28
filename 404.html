@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stránka nenalezena – Aleš Demjan</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Aleš Demjan</a>
+    <nav aria-label="Hlavní navigace">
+      <a class="hide-m" href="/">Úvod</a>
+      <a href="/koucink">Koučink</a>
+      <a href="/treninky">Tréninky</a>
+      <a href="/#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero center">
+    <div class="wrap">
+      <span class="eyebrow">Chyba 404</span>
+      <h1>Tuhle stránku jsem nenašel</h1>
+      <p class="lead">Odkaz je možná starý nebo v adrese chybí písmenko. Pokračovat můžete tady:</p>
+      <div class="paths not-found">
+        <a class="path" href="/">
+          <h2 class="h3">Úvod</h2>
+          <span class="more" aria-hidden="true">Přejít →</span>
+        </a>
+        <a class="path" href="/koucink">
+          <h2 class="h3">Koučink</h2>
+          <span class="more" aria-hidden="true">Přejít →</span>
+        </a>
+        <a class="path" href="/treninky">
+          <h2 class="h3">Tréninky</h2>
+          <span class="more" aria-hidden="true">Přejít →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-legal">© <span id="y"></span> Aleš Demjan</div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

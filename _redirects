@@ -1,0 +1,5 @@
+# Netlify: jediná varianta URL je bez .html (301 z variant s příponou)
+/index.html                          /                               301!
+/koucink.html                        /koucink                        301!
+/treninky.html                       /treninky                       301!
+/zasady-ochrany-osobnich-udaju.html  /zasady-ochrany-osobnich-udaju  301!
