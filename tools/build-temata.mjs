@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { upravText } from "./typografie.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dataPath = join(root, "data", "temata.json");
@@ -13,15 +14,17 @@ const { email } = JSON.parse(readFileSync(join(root, "data", "kontakt.json"), "u
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// Text s českou typografií (pevné mezery), jen pro obsah, ne pro atributy
+const txt = (s) => upravText(esc(s));
 const slug = (s) =>
   s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const groups = JSON.parse(readFileSync(dataPath, "utf8"));
 
 const card = (t) => `          <details class="topic">
-            <summary><span class="topic-name">${esc(t.nazev)}</span><span class="topic-sub">${esc(t.podtitul)}</span></summary>
+            <summary><span class="topic-name">${txt(t.nazev)}</span><span class="topic-sub">${txt(t.podtitul)}</span></summary>
             <ul>
-${t.body.map((b) => `              <li>${esc(b)}</li>`).join("\n")}
+${t.body.map((b) => `              <li>${txt(b)}</li>`).join("\n")}
             </ul>
             <a class="topic-ask" href="mailto:${email}?subject=${encodeURIComponent(`Poptávka tréninku – ${t.nazev}`)}">Poptat toto téma</a>
           </details>`;

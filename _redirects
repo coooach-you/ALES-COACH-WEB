@@ -3,3 +3,10 @@
 /koucink.html                        /koucink                        301!
 /treninky.html                       /treninky                       301!
 /zasady-ochrany-osobnich-udaju.html  /zasady-ochrany-osobnich-udaju  301!
+
+# Pracovní soubory repozitáře nejsou součástí webu
+/docs/*     /404.html  404!
+/tools/*    /404.html  404!
+/data/*     /404.html  404!
+/README.md  /404.html  404!
+/CLAUDE.md  /404.html  404!
