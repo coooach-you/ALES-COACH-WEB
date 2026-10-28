@@ -1,6 +1,6 @@
 # Web alesdemjan.cz – pokyny pro Claude
 
-Osobní web Aleše Demjana (koučink a tréninky). Statické HTML/CSS + trochu vanilla JS, bez frameworku a bez build nástroje. Stránky: `index.html` (Úvod), `koucink.html`, `treninky.html`; společné styly v `assets/style.css`. Podrobnosti o struktuře a nasazení jsou v `README.md`.
+Osobní web Aleše Demjana (koučink a tréninky). Statické HTML/CSS + trochu vanilla JS, bez frameworku a bez build nástroje. Stránky: `index.html` (Úvod), `koucink.html`, `treninky.html`, `zasady-ochrany-osobnich-udaju.html`, `404.html`; společné styly v `assets/style.css`. Podrobnosti o struktuře a nasazení jsou v `README.md`.
 
 ## Postup práce
 - Každou dávku změn dělej v nové větvi z aktuální `origin/main` a otevři pull request (`gh api repos/coooach-you/ales-coach-web/pulls ...`, GraphQL/`gh pr create` v tomto prostředí nefunguje). Slučuje ho Aleš sám, nemerguj a nepřepisuj historii (force push).
@@ -12,12 +12,16 @@ Osobní web Aleše Demjana (koučink a tréninky). Statické HTML/CSS + trochu v
 - Čeština, vykání, autor mluví v jednotném čísle („volím“, „připravuji“), nikdy „my/využíváme“. Texty, které nezadal Aleš, nevymýšlej; když je nutné něco doplnit, výslovně na to upozorni.
 - Žádná vymyšlená čísla, statistiky ani superlativy.
 - Drobné nadpisy sekcí (`.eyebrow`) jsou zrušené kromě hero sekcí.
-- Barvy jen z proměnných v `assets/style.css` (`--bg`, `--bg-alt`, `--ink`, `--ink-soft`, `--accent`, `--accent-dark`, `--line`). Písmo Inter je lokálně v `assets/fonts/` (žádné Google Fonts, analytika ani cookies).
+- Barvy jen z proměnných v `assets/style.css` (`--bg`, `--bg-alt`, `--ink`, `--ink-soft`, `--accent`, `--accent-dark`, `--line`). Písmo Inter je lokálně v `assets/fonts/` (žádné Google Fonts ani cookies). Jediná analytika je Cloudflare Web Analytics (bez cookies), skript je na konci každé stránky.
 - Kontrast textu aspoň WCAG AA, i na fotkách v hero (měř proti nejtmavšímu pixelu za textem).
-- Obrázky vytvořené AI mají poznámku „Ilustrační fotografie vytvořená pomocí AI.“ (fotka na stránce Koučink v sekci „Jak to probíhá“ je skutečná, poznámku nemá). Obrázky ukládej optimalizované (JPG/WebP, desítky až nízké stovky kB).
+- Obrázky vytvořené AI mají poznámku „Ilustrační fotografie vytvořená pomocí AI.“, kromě fotek, na kterých je Aleš (hero Koučink a Tréninky, Forma dodání, „Jak to probíhá“). Obrázky ukládej jako WebP v několika šířkách se `srcset`/`sizes` (desítky až nízké stovky kB).
+- Po úpravě textů spusť `node tools/typografie.mjs` (pevné mezery po předložkách a v číslech).
 
 ## Technické poznámky
-- Karty témat na stránce Tréninky se needitují v HTML: uprav `data/temata.json` a spusť `node tools/build-temata.mjs` (přepíše blok mezi značkami `TEMATA:START`/`TEMATA:END`). Výška karet je pevná (`.topic { min-height }`), po změně textů ověř, že se zadní strana vejde.
+- Karty témat na stránce Tréninky se needitují v HTML: uprav `data/temata.json` a spusť `node tools/build-temata.mjs` (přepíše blok mezi značkami `TEMATA:START`/`TEMATA:END`). Karty jsou rozbalovací (`<details>`), bez pevné výšky.
+- Interní odkazy používají čisté URL (`/`, `/koucink`, `/treninky`). Web běží na Netlify; `_redirects` dělá 301 z variant s `.html`. Novou stránku doplň do `_redirects`, `sitemap.xml` a patičky.
+- E-mail je na více místech; měň ho jen přes `node tools/zmena-emailu.mjs` (zdroj je `data/kontakt.json`).
+- Lokální náhled: servírovat kořen repozitáře serverem, který umí čisté URL a `404.html` (odkazy začínají `/`, přes `file://` nefungují).
 - Hero na stránkách Koučink a Tréninky má fotku v pozadí (`.hero-photo`, světlý přechod zleva doprava, do 900 px rovnoměrná vrstva) a text zarovnaný doleva; Úvod má hero vystředěný.
 - Kontaktní sekce (`#kontakt`) je na konci každé stránky a obsahuje QR kód s vizitkou (`assets/img/qr-kontakt.png`).
-- Soubor `CNAME` je záměrně smazaný (web zatím běží na github.io); nevracej ho bez pokynu. Kanonické URL a `sitemap.xml` míří na `https://alesdemjan.cz/`.
+- Soubor `CNAME` je záměrně smazaný (doména alesdemjan.cz běží na Netlify, ne na GitHub Pages); nevracej ho bez pokynu. Kanonické URL a `sitemap.xml` míří na `https://alesdemjan.cz/` bez přípony `.html`.

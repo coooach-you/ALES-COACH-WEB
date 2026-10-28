@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://alesdemjan.cz/</loc></url>
-  <url><loc>https://alesdemjan.cz/koucink.html</loc></url>
-  <url><loc>https://alesdemjan.cz/treninky.html</loc></url>
+  <url><loc>https://alesdemjan.cz/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://alesdemjan.cz/koucink</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://alesdemjan.cz/treninky</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://alesdemjan.cz/zasady-ochrany-osobnich-udaju</loc><lastmod>2026-10-28</lastmod></url>
 </urlset>
