@@ -4,7 +4,7 @@
     "temata": [
       {
         "nazev": "Emoce na pracovišti",
-        "aneb": "Aneb jak zvládat emoce tak, aby pomáhaly, ne brzdily.",
+        "podtitul": "Jak rozpoznat a zvládat emoce, aby v práci pomáhaly, ne brzdily.",
         "body": [
           "Rozpoznání emocí v běžných pracovních situacích",
           "Regulace emocí pod tlakem",
@@ -15,7 +15,7 @@
       },
       {
         "nazev": "Komunikace, která funguje",
-        "aneb": "Aneb jak si opravdu rozumět.",
+        "podtitul": "Jak mluvit srozumitelně, naslouchat a předcházet nedorozuměním.",
         "body": [
           "Jasné a srozumitelné mluvení",
           "Aktivní naslouchání v praxi",
@@ -26,7 +26,7 @@
       },
       {
         "nazev": "Obtížné rozhovory bez stresu",
-        "aneb": "Aneb jak říct těžké věci lehčím způsobem.",
+        "podtitul": "Jak se připravit na náročný rozhovor a vést ho s klidem a respektem.",
         "body": [
           "Příprava na náročný rozhovor",
           "Struktura, která drží emoce na uzdě",
@@ -37,7 +37,7 @@
       },
       {
         "nazev": "Asertivita v praxi",
-        "aneb": "Aneb jak zůstat sám sebou.",
+        "podtitul": "Jak říct ne a hájit své hranice, a přitom zůstat v dobrém vztahu.",
         "body": [
           "Říct „ne“ bez konfliktu",
           "Udržet si vlastní hranice",
@@ -48,7 +48,7 @@
       },
       {
         "nazev": "Neverbální komunikace v praxi",
-        "aneb": "Aneb to, co říkáte tělem, je slyšet víc než slova.",
+        "podtitul": "Aneb to, co říkáte tělem, je slyšet víc než slova.",
         "body": [
           "Čtení řeči těla",
           "Jak působit jistě a klidně",
@@ -59,7 +59,7 @@
       },
       {
         "nazev": "Prezentační dovednosti v praxi",
-        "aneb": "Aneb jak mluvit před lidmi tak, aby chtěli poslouchat.",
+        "podtitul": "Jak postavit prezentaci a mluvit před lidmi tak, aby poslouchali.",
         "body": [
           "Stavba silné prezentace",
           "Hlas, tempo a energie",
@@ -75,7 +75,7 @@
     "temata": [
       {
         "nazev": "Vztahy v týmu",
-        "aneb": "Aneb jak budovat pracovní vztahy, které drží i pod tlakem.",
+        "podtitul": "Vztahy mezi lidmi: důvěra, předcházení napětí a řešení konfliktů.",
         "body": [
           "Co tvoří zdravé pracovní vztahy",
           "Předcházení napětí a nedorozumění",
@@ -86,7 +86,7 @@
       },
       {
         "nazev": "Budování výkonných týmů",
-        "aneb": "Aneb jak pracovat spolu, ne jen vedle sebe.",
+        "podtitul": "Tým jako celek: role, jasná očekávání a společné cíle.",
         "body": [
           "Čím se výkonný tým liší od průměrného",
           "Role, odpovědnosti a jasná očekávání",
@@ -97,7 +97,7 @@
       },
       {
         "nazev": "Feedback, který posouvá",
-        "aneb": "Aneb jak dávat zpětnou vazbu, která nebolí, ale pomáhá.",
+        "podtitul": "Jak dávat i přijímat zpětnou vazbu, která pomáhá.",
         "body": [
           "Jasná a užitečná zpětná vazba",
           "Pozitivní i negativní feedback",
@@ -108,7 +108,7 @@
       },
       {
         "nazev": "Koučink pro každodenní situace",
-        "aneb": "Aneb jak vést lidi otázkami, ne příkazy.",
+        "podtitul": "Jak vést lidi otázkami a podporovat jejich samostatnost.",
         "body": [
           "Základní koučovací otázky",
           "Krátký koučovací rozhovor",
@@ -119,7 +119,7 @@
       },
       {
         "nazev": "Porady jako nástroj",
-        "aneb": "Aneb jak vést porady, které nejsou ztrátou času.",
+        "podtitul": "Jak připravit a vést poradu, která skončí jasným výsledkem.",
         "body": [
           "Příprava efektivní porady",
           "Udržení pozornosti",
@@ -130,7 +130,7 @@
       },
       {
         "nazev": "Firemní kultura, která žije",
-        "aneb": "Aneb jak tvořit prostředí, kde lidé chtějí být.",
+        "podtitul": "Jak tvořit prostředí, kde hodnoty platí i v každodenní praxi.",
         "body": [
           "Co tvoří živou kulturu",
           "Hodnoty, které nejsou jen na zdi",
@@ -146,7 +146,7 @@
     "temata": [
       {
         "nazev": "Mozek v práci",
-        "aneb": "Aneb manuál pro váš mozek.",
+        "podtitul": "Aneb manuál pro váš mozek: co se v hlavě děje pod tlakem a jak s tím pracovat.",
         "body": [
           "Reakce mozku na stres a tlak",
           "Když se mozek „zasekne“",
@@ -157,7 +157,7 @@
       },
       {
         "nazev": "Mindfulness v pracovním dni",
-        "aneb": "Aneb jak zpomalit, aby práce šla rychleji.",
+        "podtitul": "Krátké techniky, jak se během dne vracet do přítomnosti a zklidnit hlavu.",
         "body": [
           "Návrat do přítomnosti během dne",
           "Krátké mindfulness techniky",
@@ -168,7 +168,7 @@
       },
       {
         "nazev": "Stres management",
-        "aneb": "Aneb jak zkrotit stres dřív, než zkrotí on vás.",
+        "podtitul": "Aneb jak zkrotit stres dřív, než zkrotí on vás.",
         "body": [
           "Včasné rozpoznání stresu",
           "Práce s akutním stresem",
@@ -179,7 +179,7 @@
       },
       {
         "nazev": "Time management",
-        "aneb": "Aneb jak řídit čas, aby neřídil vás.",
+        "podtitul": "Aneb jak řídit čas, aby neřídil vás.",
         "body": [
           "Nastavení priorit",
           "Práce s energií, ne jen s časem",
@@ -190,7 +190,7 @@
       },
       {
         "nazev": "Work–life balance",
-        "aneb": "Aneb jak žít tak, aby práce nebyla celý život.",
+        "podtitul": "Jak nastavit hranice mezi prací a osobním životem a udržet rovnováhu.",
         "body": [
           "Nastavení hranic",
           "Práce s energií",
@@ -200,8 +200,8 @@
         ]
       },
       {
-        "nazev": "Osobní rozvoj bez klišé",
-        "aneb": "Aneb život podle mě.",
+        "nazev": "Osobní rozvoj podle sebe",
+        "podtitul": "Jak si nastavit vlastní směr a vybrat nástroje rozvoje, které vám sedí.",
         "body": [
           "Nastavení vlastní cesty",
           "Když se člověk zasekne",
@@ -217,7 +217,7 @@
     "temata": [
       {
         "nazev": "AI nástroje v každodenní práci",
-        "aneb": "Aneb jak využít AI chytře, prakticky a bez strachu.",
+        "podtitul": "Jak používat AI chytře, prakticky a bez obav v běžné práci.",
         "body": [
           "Co dnes AI opravdu umí",
           "Úspora času a automatizace",
@@ -228,7 +228,7 @@
       },
       {
         "nazev": "Efektivita v Microsoft Office",
-        "aneb": "Aneb jak udělat víc práce za méně kliků.",
+        "podtitul": "Funkce a postupy v Excelu, Wordu a Outlooku, které šetří čas.",
         "body": [
           "Klíčové funkce, které šetří čas",
           "Chytré šablony",
@@ -238,8 +238,8 @@
         ]
       },
       {
-        "nazev": "Kreativita pro nekreativce",
-        "aneb": "Aneb jak zapnout kreativní režim, když ho potřebujete.",
+        "nazev": "Kreativita jako dovednost",
+        "podtitul": "Jednoduché techniky, jak přicházet s nápady, i když je potřebujete hned.",
         "body": [
           "Překonání kreativního bloku",
           "Jednoduché techniky pro nápady",
