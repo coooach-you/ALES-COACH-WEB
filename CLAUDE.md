@@ -16,7 +16,7 @@ Osobní web Aleše Demjana (koučink a tréninky). Statické HTML/CSS + trochu v
 - Každý PR má náhled `https://deploy-preview-<číslo PR>--alescoach.netlify.app/`. Po sloučení se produkce nasadí za pár minut; ověř na `https://alesdemjan.cz/`. Netlify jede na kreditech – když dojdou, produkční nasazení se pozastaví (web dál běží ve staré verzi).
 
 ## Obsah a styl
-- Čeština, vykání, autor mluví v jednotném čísle („volím“, „připravuji“), nikdy „my/využíváme“. Texty, které nezadal Aleš, nevymýšlej; když je nutné něco doplnit, výslovně na to upozorni.
+- Čeština; u koučinku (individuální služba: stránka Koučink a karta „Individuální práce“ na Úvodu) tykání, jinde vykání. Při tykání piš rodově neutrálně (ne „posunul ses“, „vyzkoušel“, ale „máš za sebou posun“, „na vyzkoušení“). Autor mluví v jednotném čísle („volím“, „připravuji“), nikdy „my/využíváme“. Texty, které nezadal Aleš, nevymýšlej; když je nutné něco doplnit, výslovně na to upozorni.
 - Žádná vymyšlená čísla, statistiky ani superlativy.
 - Drobné nadpisy sekcí (`.eyebrow`) jsou zrušené kromě hero sekcí.
 - Barvy jen z proměnných v `assets/style.css` (`--bg`, `--bg-alt`, `--ink`, `--ink-soft`, `--accent`, `--accent-dark`, `--line`). Písmo Inter je lokálně v `assets/fonts/` (žádné Google Fonts ani cookies). Jediná analytika je Cloudflare Web Analytics (bez cookies), skript je na konci každé stránky.
